@@ -1,6 +1,9 @@
+const handlebar = require('handlebars');
+const fs = require('fs')
+
 let fn_index = async (ctx,next)=>{
     let content = await new Promise((resolve,reject)=>{
-        fs.readFile('../index.html', "utf8",(err,ctx)=>{
+        fs.readFile('./index.html', "utf8",(err,ctx)=>{
             if(!err){
                 resolve(ctx);
             }else{
