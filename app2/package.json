@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve --port 8082",
-    "build": "vue-cli-service build"
+    "dev": "vue-cli-service serve --port 8082",
+    "serve":"nodemon server.js",
+    "build": "vue-cli-service build --mode=production && node filerev",
+    "release": "vue-cli-service build --mode=release"
   },
   "dependencies": {
     "core-js": "^3.2.1",

@@ -1,9 +1,13 @@
 {
   "name": "root-html-file",
   "scripts": {
-    "serve": "serve -s -l 5000"
+    "serve": "nodemon server.js"
   },
   "devDependencies": {
     "serve": "^11.1.0"
+  },
+  "dependencies": {
+    "koa": "^2.11.0",
+    "koa-router": "^7.4.0"
   }
 }
