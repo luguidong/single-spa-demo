@@ -11,15 +11,15 @@
       {
         "imports": {
           "navbar": "http://localhost:8080/app.js",
-          "app1": "http://localhost:8081/app.js",
+          "app1": "http://localhost:3001/{{app1}}",
           "app2": "http://localhost:8082/app.js",
-          "single-spa": "/single-spa.dev.js",
+          "single-spa": "/static/single-spa.dev.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
           "vue-router": "https://cdn.jsdelivr.net/npm/vue-router@3.0.7/dist/vue-router.min.js"
         }
       }
     </script>
-  <link rel="preload" href="/single-spa.dev.js"
+  <link rel="preload" href="/static/single-spa.dev.js"
     as="script" crossorigin="anonymous" />
   <link rel="preload" href="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js" as="script" crossorigin="anonymous" />
   <script src="https://unpkg.com/import-map-overrides@1.7.2/dist/import-map-overrides.js"></script>

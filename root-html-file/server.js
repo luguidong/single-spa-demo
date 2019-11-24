@@ -1,7 +1,7 @@
 const Koa = require('koa');
 const app = new Koa();
 const fs = require('fs');
-
+const staticFiles = require('./static-files');
 const controller = require('./controller');
 
 app.use(async (ctx, next) => {
@@ -9,7 +9,7 @@ app.use(async (ctx, next) => {
   await next();
 });
 
-
+app.use(staticFiles('/static/',__dirname+'/static'))
 app.use(controller())
 
 app.listen(3000);

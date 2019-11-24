@@ -4,12 +4,13 @@
   "private": true,
   "scripts": {
     "dev": "vue-cli-service serve --port 8081",
-    "serve":"nodemon server.js",
+    "serve": "nodemon server.js",
     "build": "vue-cli-service build --mode=production && node filerev",
     "release": "vue-cli-service build --mode=release"
   },
   "dependencies": {
     "core-js": "^3.2.1",
+    "koa": "^2.11.0",
     "single-spa-vue": "^1.5.4",
     "systemjs-webpack-interop": "^1.1.0",
     "vue": "^2.6.10",
