@@ -13,6 +13,7 @@ async function getStaticPath(){
 
 let fn_index = async (ctx,next)=>{
     let app1Path = await getStaticPath();
+    
     let content = await new Promise((resolve,reject)=>{
         fs.readFile('./index.html', "utf8",(err,ctx)=>{
             if(!err){

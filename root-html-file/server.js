@@ -1,6 +1,5 @@
 const Koa = require('koa');
 const app = new Koa();
-const fs = require('fs');
 const staticFiles = require('./static-files');
 const controller = require('./controller');
 

@@ -11,7 +11,7 @@
       {
         "imports": {
           "navbar": "http://localhost:8080/app.js",
-          "app1": "http://localhost:3001/{{app1}}",
+          "app1": "http://localhost:3001/dist/js/{{app1}}",
           "app2": "http://localhost:8082/app.js",
           "single-spa": "/static/single-spa.dev.js",
           "vue": "https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js",
@@ -38,11 +38,11 @@
         var Vue = modules[1];
         var VueRouter = modules[2];
         Vue.use(VueRouter)
-        singleSpa.registerApplication(
-          'navbar',
-          () => System.import('navbar'),
-          location => true
-        );
+        // singleSpa.registerApplication(
+        //   'navbar',
+        //   () => System.import('navbar'),
+        //   location => true
+        // );
         singleSpa.registerApplication(
           'app1',
           () => System.import('app1'),
