@@ -5,8 +5,8 @@ import router from './router';
 import singleSpaVue from 'single-spa-vue';
 
 Vue.config.productionTip = false;
-
-if(env === 'development'){
+let env = process.env.NODE_ENV;
+if(env && env === 'development'){
   new Vue({
     el:'#app',
     router,

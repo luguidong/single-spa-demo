@@ -3,7 +3,7 @@
     <div>
       <img alt="Vue logo" src="../assets/logo.png">
     </div>
-    <router-link to="/app2/about">App2's about page</router-link>
+    <button @click="toTest">to test</button> 
     <router-link to="/app1/test">App1's test</router-link>
   </div>
 </template>
@@ -16,6 +16,11 @@ export default {
   name: 'home',
   components: {
     HelloWorld
+  },
+  methods:{
+    toTest(){
+      this.$router.push('/app/test');
+    }
   }
 }
 </script>

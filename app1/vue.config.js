@@ -8,5 +8,5 @@ module.exports = {
     }
   },
   filenameHashing: true,
-  publicPath:'http://localhost:3001/dist/'
+  //publicPath:'http://localhost:3001/dist/'
 }
