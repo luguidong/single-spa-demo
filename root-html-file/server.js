@@ -11,4 +11,5 @@ app.use(async (ctx, next) => {
 app.use(staticFiles('/static/',__dirname+'/static'))
 app.use(controller())
 
+
 app.listen(3000);

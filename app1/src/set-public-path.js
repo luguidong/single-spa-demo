@@ -1,2 +1,4 @@
 import { setPublicPath } from 'systemjs-webpack-interop'
-setPublicPath('app1')
+if(process.env.NODE_ENV!=='development'){
+    setPublicPath('app1',2)
+}

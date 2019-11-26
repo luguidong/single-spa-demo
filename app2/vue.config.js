@@ -7,5 +7,5 @@ module.exports = {
       config.externals(['vue', 'vue-router'])
     }
   },
-  filenameHashing: false,
+  filenameHashing: true,
 }

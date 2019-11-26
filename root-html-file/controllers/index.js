@@ -2,9 +2,9 @@ const handlebar = require('handlebars');
 const fs = require('fs')
 const request = require('request-promise')
 
-async function getStaticPath(){
+async function getStaticPath(serverPath){
     return new Promise(resolve=>{
-        request('http://localhost:3001').then(res=>{
+        request(serverPath).then(res=>{
             let data = JSON.parse(res);
             resolve(data.app);
         })
@@ -12,8 +12,8 @@ async function getStaticPath(){
 }
 
 let fn_index = async (ctx,next)=>{
-    let app1Path = await getStaticPath();
-    
+    let app1Path = await getStaticPath('http://localhost:3001');
+    let app2Path = await getStaticPath('http://localhost:3002');
     let content = await new Promise((resolve,reject)=>{
         fs.readFile('./index.html', "utf8",(err,ctx)=>{
             if(!err){
@@ -24,7 +24,7 @@ let fn_index = async (ctx,next)=>{
           })
       })
       let template = handlebar.compile(content);
-      let data = {app1:app1Path}
+      let data = {app1:app1Path,app2:app2Path}
       content = template(data)
       ctx.response.body = content;
 }
